@@ -7,6 +7,3 @@
 
 <br/>
 <img style="margin: 0 auto;display:block; width: 300px" src="https://i.imgur.com/QX72I41.png"/>
-
-s
-sdadadsasfdafdfadfsa
