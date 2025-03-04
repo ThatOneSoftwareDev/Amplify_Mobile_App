@@ -6,4 +6,6 @@
 -----
 
 <br/>
-<img align="center" style="width: 300px" src="https://i.imgur.com/QX72I41.png"/>
+<div align="center">
+	<img align="center" style="width: 300px" src="https://i.imgur.com/QX72I41.png"/>
+</div>
