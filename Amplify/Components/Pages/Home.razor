@@ -1,5 +1,46 @@
-﻿@page "/"
+﻿@* 
+if you set the below line to 
+@page "/page/{name}"
+you can use it in code like this:
+@code {
+    string name;
+} 
+*@
 
-<h1>Hello, world!</h1>
+@page "/"
+@using MonkeyFinderHybrid.Model
+@using MonkeyFinderHybrid.Services
+@inject MonkeyService monkeyService
 
-Welcome to your new app.
+<div>
+    <table>
+        <tbody>
+            @foreach (var monkey in monkeys)
+            {
+                <tr>
+                    @* this is the image data *@
+                    <td>
+                        <img src="@monkey.Image" alt="@monkey.Name" style="width: 100px; height: 100px;" />
+                    </td>
+                    @* this is the monkey data *@
+                    <td>
+                        <strong>@monkey.Name</strong>
+                        <p>@monkey.Location</p>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+
+
+@code{
+    private List<Monkey>? monkeys = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        monkeys = await monkeyService.GetMonkeys();
+    }
+}
