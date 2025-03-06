@@ -22,7 +22,7 @@ public class MonkeyService
         var response = await httpClient.GetAsync("https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/MonkeysApp/monkeydata.json");
 
         if (response.IsSuccessStatusCode) {
-            var monkeysResult = await response.Content.ReadFromJsonAsync(MonkeyContext.Default.ListMonkey);
+            var monkeysResult = await response.Content.ReadFromJsonAsync(MonkeyContext.Default.ListMonkey); //parse to a list
 
             if (monkeysResult is not null) {
                 monkeysList = monkeysResult;
