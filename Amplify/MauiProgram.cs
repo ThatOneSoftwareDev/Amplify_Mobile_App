@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using MonkeyFinderHybrid.Services;
 
 namespace Amplify;
 
@@ -15,6 +16,7 @@ public static class MauiProgram
 			});
 
 		builder.Services.AddMauiBlazorWebView();
+		builder.Services.AddSingleton<MonkeyService>();
 
 #if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();
