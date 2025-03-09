@@ -8,3 +8,9 @@
 <div align="center">
 	<img align="center" style="width: 300px" src="https://i.imgur.com/QX72I41.png"/>
 </div>
+
+
+<br/>
+<br/>
+
+When the app dosent run correctly you can use the dotnet [restore method](https://stackoverflow.com/questions/45335605/razor-the-type-or-namespace-could-not-be-found)
