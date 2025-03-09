@@ -12,25 +12,27 @@ you can use it in code like this:
 @using MonkeyFinderHybrid.Services
 @inject MonkeyService monkeyService
 
+<div>
+    <button></button>
+    @if (monkeys is null)
+    {
+        <p><em>Loading...</em></p>
+    } else
+    {
+        <ul class="card-list">
+            @foreach(var monkey in monkeys){
+                <li class="card-item">
+                    <img src="@monkey.Image" width="200" height="200"/>
+                    <div class="card-content">
+                        <h2>@monkey.Name</h2>
+                        <p>@monkey.Location</p>
+                    </div>
+                </li>
+            }
+        </ul>
+    }
+</div>
 
-
-@if (monkeys is null)
-{
-    <p><em>Loading...</em></p>
-} else
-{
-    <ul class="card-list">
-        @foreach(var monkey in monkeys){
-            <li class="card-item">
-                <img src="@monkey.Image" width="200" height="200"/>
-                <div class="card-content">
-                    <h2>@monkey.Name</h2>
-                    <p>@monkey.Location</p>
-                </div>
-            </li>
-        }
-    </ul>
-}
 
 
 
